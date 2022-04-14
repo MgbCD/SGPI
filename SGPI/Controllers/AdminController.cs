@@ -16,5 +16,9 @@ namespace SGPI.Controllers
         {
             return View();
         }
+         public IActionResult BuscarUsuario()
+        {
+            return View();
+        }
     }
 }
