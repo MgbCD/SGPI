@@ -15,10 +15,11 @@ namespace SGPI.Controllers
         public IActionResult CrearUsuario()
         {
             return View();
-        }
-         public IActionResult BuscarUsuario()
+        }     
+  public IActionResult BuscarUsuario()
         {
             return View();
-        }
-    }
+        }     
+
+    }  
 }
