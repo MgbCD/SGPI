@@ -8,6 +8,10 @@ namespace SGPI.Controllers
 {
     public class AdminController : Controller
     {
+        public IActionResult Administrador()
+        {
+            return View();
+        }
         public IActionResult AdministrarUsuario()
         {
             return View();
@@ -19,7 +23,12 @@ namespace SGPI.Controllers
   public IActionResult BuscarUsuario()
         {
             return View();
-        }     
+        }
+
+        public IActionResult InformeUsuario()
+        {
+            return View();
+        }
 
     }  
 }
