@@ -1,12 +1,11 @@
-﻿    @{
-        ViewData["Title"] = "Administrador";
+﻿ @{
+        ViewData["Title"] = "Estudiantes";
     }
     <html>
     <head>
-       
-        
+    
+
     <style type="text/css">
-       
     #navegador ul{
        list-style-type: none;
        text-align: center;
@@ -31,19 +30,17 @@
     </head>
 
     <body>
-         
- <center><h1> Administrar Usuarios</h1> </center>
+        <center><h1> Estudiantes  </h1> </center>
  <br />
+
     <div id="navegador">
     <ul>
-   
-    <li> <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="CrearUsuario">Crear Usuario</a></li>
-    <li><a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="BuscarUsuario">Buscar Usuario</a></li>
-    <li><a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="InformeUsuario">Informe Usuario</a></li>
+    <li> 
+      <a class="nav-link text-dark" asp-area="" asp-controller="Est" asp-action="PerfilEst">Perfil</a></li>
+    <li> <a class="nav-link text-dark" asp-area="" asp-controller="Est" asp-action="PagoMatriculaEst">Pago Matricula</a></li>
+    
     </ul>
     </div>
 
     </body>
     </html>
-
- 

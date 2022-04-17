@@ -12,10 +12,7 @@ namespace SGPI.Controllers
         {
             return View();
         }
-        public IActionResult AdministrarUsuario()
-        {
-            return View();
-        }
+      
         public IActionResult CrearUsuario()
         {
             return View();

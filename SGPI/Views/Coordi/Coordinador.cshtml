@@ -1,0 +1,49 @@
+﻿    @{
+        ViewData["Title"] = "Coordinador";
+    }
+    <html>
+    <head>
+    
+
+    <style type="text/css">
+    #navegador ul{
+       list-style-type: none;
+       text-align: center;
+    }
+    #navegador li{
+       display: inline;
+       text-align: center;
+       margin: 0 10px 0 0;
+    }
+    #navegador li a {
+       padding: 2px 7px 2px 7px;
+       color: #666;
+       background-color: #eeeeee;
+       border: 1px solid #ccc;
+       text-decoration: none;
+    }
+        #navegador li a:hover {
+            background-color: #218A07;
+            color: #ffffff;
+        }
+       </style>
+    </head>
+
+    <body>
+        <center><h1> Coordinador </h1> </center>
+ <br />
+
+    <div id="navegador">
+    <ul>
+    <li> 
+      <a class="nav-link text-dark" asp-area="" asp-controller="Coordi" asp-action="CoordinadorConsulta">Coordinador Consultar</a></li>
+    <li> <a class="nav-link text-dark" asp-area="" asp-controller="Coordi" asp-action="CoordinadorEntrevista">Coordinador Entrevista</a></li>
+    <li><a class="nav-link text-dark" asp-area="" asp-controller="Coordi" asp-action="CoordinadorHomologar">Coordinador Homologar</a></li>
+    <li><a class="nav-link text-dark" asp-area="" asp-controller="Coordi" asp-action="CoordinadorProgramarAsignatura">Coordinador Programar Asignatura</a></li>
+    </ul>
+    </div>
+
+    </body>
+    </html>
+
+ 
