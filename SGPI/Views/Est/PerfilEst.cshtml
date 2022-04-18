@@ -1,5 +1,168 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "PerfilEst";
 }
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+{
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+.enviarbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #218A07;
+}
+
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+
+
+.container {
+  padding: 16px;
+}
+.form{
+    position: relative;
+
+  width  : 740px;
+  height : 498px;
+  margin : 0 auto;
+
+  background: #FFF
+
+}
+
+}
+.label {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+.input {
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin:0;
+    position: relative;
+}
+
+
+  
+}
+</style>
+</head>
+<body>
+
+<center>
+    <h2>Perfil</h2> </center>
+
+<form class="form" action="/action_page.php" method="post">
+  
+    <fieldset>
+
+  <div class="container">
+       <label class="label" for="tipoDocumento"><b>Ingresar documento del estudiante</b></label>
+      <select id="tipoDocumento" name="tipoDocumento">
+  <option>Tipo de documento </option>
+  <option value="cedulaDeCiudadania">Cedula de iudadania</option>
+  <option value="tarjetaDeIdentidad">Tarjeta de identidad</option>
+  <option value="cedulaDeExtranjero">Cedula de extranjeria</option>
+  <option value="pasaporte">Pasaporte</option>
+      </select>
+
+    <label class="label" for="num"><b>Documento</b></label>
+    <input class="input" type="text" placeholder="Ingrese documento"  name="num" required>
+
+    <label class="label" for="programa"><b>Programa</b></label>
+      <select id="programa" name="programa">
+  <option>Elija un programa </option>
+  <option value="esi">Especializacion en seguridad de la informacion</option>
+  <option value="mgti">Maestria en gestion de tecnologia de la informacion </option>
+  <option value="mgrma">Maestria en gestion de riesgo y medio ambiente </option>
+      </select>
+      
+        <label class="label" for="nom"><b>Nombre</b></label>
+    <input type="text" class="input" placeholder="Ingrese nombre" name="nombre" required>
+
+    <label class="label" for="apellido"><b>Apellido</b></label>
+    <input type="text" class="input" placeholder="Ingrese apellido" name="apellido" required>
+
+     <label class="label" for="genero"><b>Genero</b></label>
+      <select id="genero" name="genero">
+  <option>Seleccione genero </option>
+  <option value="f">Femenino</option>
+  <option value="m">Masculino </option>
+  <option value="otro">Otro </option>
+      </select>
+
+    <label class="label" for="eml"><b>Correo</b></label>
+    <input type="email" class="input" placeholder="Ingrese correo electronico" name="email" required>
+
+    <label class="label" for="direccion"><b>Direccion</b></label>
+    <input type="text" class="input" placeholder="Ingrese direccion" name="direccion" required>
+   
+   <label class="label" for="telefono"><b>Telefono</b></label>
+    <input type="number" class="input" placeholder="Ingrese telefono" name="telefono" required>
+
+
+    <label class="label" for="egresado"><b>¿Es egresado?</b></label>
+    <br>
+
+       <label><input type="checkbox" id="cbox1" value="first_checkbox"> Si</label><br>
+
+<input type="checkbox" id="cbox2" value="second_checkbox"> <label for="cbox2">No</label>
+
+<label class="label" for="electoral"><b>Certificado electoral</b></label>
+ <input type="file" name="comprobante">
+  </div> 
+
+
+  <div class="container" style="background-color:#f1f1f1">
+        <input type="submit" class="enviarbtn"> 
+    <button type="button"  class="cancelbtn">Cancelar</button>
+  
+  </div>
+  </fieldset>
+</form>
+
+</body>
+</html>
+
+
+
+
+

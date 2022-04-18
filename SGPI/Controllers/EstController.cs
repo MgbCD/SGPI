@@ -8,6 +8,10 @@ namespace SGPI.Controllers
 {
     public class EstController : Controller
     {
+        public IActionResult Estudiantes()
+        {
+            return View();
+        }
         public IActionResult PerfilEst()
         {
             return View();

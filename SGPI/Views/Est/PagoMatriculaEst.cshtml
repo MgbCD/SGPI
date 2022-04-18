@@ -1,5 +1,102 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "PagoMatricula";
 }
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+{
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+
+  
+}
+.generarbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #218A07;
+}
+
+
+.table{
+    width: auto;
+    border: solid #000;
+}
+.tr{
+    width: auto;
+    text-align: left;
+    vertical-align: top;
+    border: solid #000;
+
+}
+.label {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+.input {
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin:0;
+    position: relative;
+}
+
+
+}
+
+
+</style>
+</head>
+<body>
+
+<center>
+    <h2>Pago de Matricula</h2> </center>
+
+
+<table class="table">
+<tr class="tr">
+  <td><strong>Numero</strong></td>
+  <td><strong>Valor pagado</strong></td>
+  <td><strong>Fecha pago</strong></td>
+  
+  <td><strong>Comprobante</strong></td>
+  <td><strong>Ver</strong></td>
+  
+</tr>
+
+<tr class="tr">
+  <td>1</td>
+  <td><input id="number" type="number" ></td>
+  <td><input type="date" id="iniciar" name="iniciar" min="1995-01-01" max="2025-01-01"/></td>
+  <td>  <input type="file" name="comprobante">Examinar</td>
+  <td><input type="submit" value="enviar"></td>
+ 
+
+ 
+ 
+</tr>
+
+
+</table>
+<button type="button"  class="generarbtn">Enviar</button>
+<button type="button"  class="cancelbtn">Cancelar</button>
+
+</body>
+</html>
+
+

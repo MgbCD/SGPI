@@ -1,5 +1,110 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "CoordinadorHomologar";
 }
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+{
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.search{
+     width: auto;
+            float:left;
+            margin:auto ;
+  
+        }
+
+.table{
+    width: auto;
+    border: solid #000;
+}
+.tr{
+    width: auto;
+    text-align: left;
+    vertical-align: top;
+    border: solid #000;
+
+}
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+
+  
+}
+
+}
+
+
+</style>
+</head>
+<body>
+
+<center>
+    <h2>Homologar</h2> </center>
+
+<form action="../../form-result.php" method="post" target="_blank">
+
+  <p>
+   
+   <input type="search" class="search" name="busqueda" placeholder="Buscar por documento de estudiante">
+   <br />
+
+   <label  for="programa"><b>seleccione el semestre</b></label>
+    <input type="date" id="iniciar" name="iniciar" min="1995-01-01" max="2025-01-01"/>
+   
+  </p>
+
+</form>
+<table class="table">
+<tr class="tr">
+  <td><strong>Fecha Elaboracion</strong></td>
+  <td><strong>Nombre</strong></td>
+  <td><strong>Programa</strong></td>
+  
+  <td><strong>Periodo academico</strong></td>
+  <td><strong>Documento</strong></td>
+   <td><strong>Tipo de homologacion</strong></td>
+  
+ 
+</tr>
+
+<tr class="tr">
+  <td><input type="date" id="iniciar" name="iniciar" min="1995-01-01" max="2025-01-01"/></td>
+  <td>Camilo Giraldo</td>
+  <td><select id="programa" name="programa">
+  <option>Elija un programa </option>
+  <option value="esi">Especializacion en seguridad de la informacion</option>
+  <option value="mgti">Maestria en gestion de tecnologia de la informacion </option>
+  <option value="mgrma">Maestria en gestion de riesgo y medio ambiente </option>
+      </select></td>
+  <td><input type="date" id="iniciar" name="iniciar" min="1995-01-01" max="2025-01-01"/></td>
+  <td> 102054612 </td>
+  <td><select id="homologar" name="homologar">
+  <option>Tipo de homologacion </option>
+  <option value="ti">Transferencia interna</option>
+  <option value="te">Transferencia externa </option>
+  
+      </select></td>
+  
+</tr>
+
+
+</table>
+<button type="button"  class="cancelbtn">Atras</button>
+
+</body>
+</html>
+
+

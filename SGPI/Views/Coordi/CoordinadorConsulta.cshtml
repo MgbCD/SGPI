@@ -1,5 +1,117 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "CoordinadorConsulta";
 }
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+{
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.search{
+     width: auto;
+            float:left;
+            margin:auto ;
+  
+        }
+
+.table{
+    width: auto;
+    border: solid #000;
+}
+.tr{
+    width: auto;
+    text-align: left;
+    vertical-align: top;
+    border: solid #000;
+
+}
+.label {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+.input {
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin:0;
+    position: relative;
+}
+
+
+}
+
+
+</style>
+</head>
+<body>
+
+<center>
+    <h2>Consulta</h2> </center>
+
+<form action="../../form-result.php" method="post" target="_blank">
+
+  <p>
+   <label class="label" for="search"><b>Buscar por documento de estudiante</b></label>
+   <input type="search" class="input" class="search" name="busqueda" placeholder="Buscador">
+
+    <input type="submit" value="Buscar">
+     <label class="label" for="programa"><b>Elegir por programa</b></label>
+      <select id="programa" name="programa">
+  <option>Elija un programa </option>
+  <option value="esi">Especializacion en seguridad de la informacion</option>
+  <option value="mgti">Maestria en gestion de tecnologia de la informacion </option>
+  <option value="mgrma">Maestria en gestion de riesgo y medio ambiente </option>
+      </select>
+  </p>
+
+</form>
+<table class="table">
+<tr class="tr">
+  <td><strong>Nombre</strong></td>
+  <td><strong>Numero documento</strong></td>
+  <td><strong>Programa</strong></td>
+  
+  <td><strong>email</strong></td>
+  <td><strong>Telefono</strong></td>
+   <td><strong>Valor pagado</strong></td>
+  <td><strong>Fecha pago</strong></td>
+  <td><strong>Estado</strong></td>
+  <td><strong>Opcion</strong></td>
+ 
+</tr>
+
+<tr class="tr">
+  <td>Camilo Giraldo</td>
+  <td>2014554</td>
+  <td>Ingenieria en software</td>
+  <td> <input type="email"> </td>
+  <td>2154002</td>
+  <td><input id="number" type="number" ></td>
+ <td><input type="date" id="iniciar" name="iniciar" min="1995-01-01" max="2025-01-01"/>
+      </td>
+  <td>Admintido</td>
+
+  <td><input type="file" />Agregar</td>
+ 
+</tr>
+
+
+</table>
+
+
+</body>
+</html>
+
+

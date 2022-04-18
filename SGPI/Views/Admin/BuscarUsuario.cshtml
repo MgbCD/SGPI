@@ -2,5 +2,114 @@
     ViewData["Title"] = "BuscarUsuario";
 }
 
-<h1> Buscar Usuario</h1>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+{
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.search{
+            float:left;
+            margin:auto ;
+  
+        }
+
+.table{
+    width: auto;
+    border: solid #000;
+}
+.tr{
+    width: auto;
+    text-align: left;
+    vertical-align: top;
+    border: solid #000;
+
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+
+  
+}
+</style>
+</head>
+<body>
+
+<center>
+    <h2>Buscar usuario</h2> </center>
+
+<form action="../../form-result.php" method="post" target="_blank">
+
+  <p>
+
+   <input type="search" class="search" name="busqueda" placeholder="Buscador">
+
+    <input type="submit" value="Buscar">
+
+  </p>
+
+</form>
+<table class="table">
+<tr class="tr">
+  <td><strong>Tipo documento</strong></td>
+  <td><strong>Numero documento</strong></td>
+  <td><strong>Nombre</strong></td>
+   <td><strong>Apellido</strong></td>
+  <td><strong>Programa</strong></td>
+  <td><strong>Rol</strong></td>
+   <td><strong>Fecha</strong></td>
+  <td><strong>Acciones</strong></td>
+ 
+</tr>
+
+<tr class="tr">
+  <td><select id="tipoDocumento" name="tipoDocumento">
+  <option>Tipo de documento </option>
+  <option value="cedulaDeCiudadania">Cedula de iudadania</option>
+  <option value="tarjetaDeIdentidad">Tarjeta de identidad</option>
+  <option value="cedulaDeExtranjero">Cedula de extranjeria</option>
+  <option value="pasaporte">Pasaporte</option>
+      </select></td>
+  <td>2014554</td>
+  <td>Marlon</td>
+  <td>Cifuentes</td>
+  <td> <select id="programa" name="programa">
+  <option>Elija un programa </option>
+  <option value="esi">Especializacion en seguridad de la informacion</option>
+  <option value="mgti">Maestria en gestion de tecnologia de la informacion </option>
+  <option value="mgrma">Maestria en gestion de riesgo y medio ambiente </option>
+      </select></td>
+  <td><select id="rol" name="rol">
+  <option>Seleccione rol</option>
+  <option value="estudiante">Estudiante</option>
+  <option value="coordinador">Coordinador </option>
+  <option value="administrador">Administrador </option>
+      </select></td>
+  <td><input type="date" id="iniciar" name="iniciar" min="1995-01-01" max="2025-01-01"/>
+      </td>
+  <td><button type="button" >Editar</button><button type="button" >Eliminar</button></td>
+ 
+</tr>
+
+
+</table>
+
+<button type="button"  class="cancelbtn">Cancelar</button>
+
+</body>
+</html>
+
 

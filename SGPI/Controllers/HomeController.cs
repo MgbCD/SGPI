@@ -23,7 +23,7 @@ namespace SGPI.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult OlvidoContraseña()
         {
             return View();
         }
