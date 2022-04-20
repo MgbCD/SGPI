@@ -58,9 +58,9 @@ button:hover {
 .form{
     position: relative;
 
-  width  : 740px;
+  width  : 1100px;
   height : 498px;
-  margin : 0 auto;
+  
 
   background: #FFF
 
@@ -94,61 +94,91 @@ button:hover {
   
     <fieldset>
 
-  <div class="container">
-       <label class="label" for="tipoDocumento"><b>Ingresar documento del estudiante</b></label>
-      <select id="tipoDocumento" name="tipoDocumento">
-  <option>Tipo de documento </option>
-  <option value="cedulaDeCiudadania">Cedula de iudadania</option>
-  <option value="tarjetaDeIdentidad">Tarjeta de identidad</option>
-  <option value="cedulaDeExtranjero">Cedula de extranjeria</option>
-  <option value="pasaporte">Pasaporte</option>
-      </select>
+    <div class="container" style="display: flex;">
+        <div style="margin: 10px;">
+            <label class="label" for="tipoDocumento"><b>Tipo de documento</b></label>
+            <br>
+            <select id="tipoDocumento" name="tipoDocumento">
+                <option value="cedulaDeCiudadania">Cedula de ciudadania</option>
+                <option value="tarjetaDeIdentidad">Tarjeta de identidad</option>
+                <option value="cedulaDeExtranjero">Cedula de extranjeria</option>
+                <option value="pasaporte">Pasaporte</option>
+            </select>
 
-    <label class="label" for="num"><b>Documento</b></label>
-    <input class="input" type="text" placeholder="Ingrese documento"  name="num" required>
+            <div style="display: flex;">
+                <div style="margin: 10px;">
+                    <label class="label" for="nom"><b>Nombre</b></label>
+                    <input type="text" class="input" placeholder="Ingrese nombre" name="nombre" required style="width: 150px;">
+                </div>
 
-    <label class="label" for="programa"><b>Programa</b></label>
-      <select id="programa" name="programa">
-  <option>Elija un programa </option>
-  <option value="esi">Especializacion en seguridad de la informacion</option>
-  <option value="mgti">Maestria en gestion de tecnologia de la informacion </option>
-  <option value="mgrma">Maestria en gestion de riesgo y medio ambiente </option>
-      </select>
-      
-        <label class="label" for="nom"><b>Nombre</b></label>
-    <input type="text" class="input" placeholder="Ingrese nombre" name="nombre" required>
+                <div style="margin: 10px;">
+                    <label class="label" for="apellido"><b>Apellido</b></label>
+                    <input type="text" class="input" placeholder="Ingrese apellido" name="apellido" required style="width: 150px;">
+                </div>
 
-    <label class="label" for="apellido"><b>Apellido</b></label>
-    <input type="text" class="input" placeholder="Ingrese apellido" name="apellido" required>
+            </div>
 
-     <label class="label" for="genero"><b>Genero</b></label>
-      <select id="genero" name="genero">
-  <option>Seleccione genero </option>
-  <option value="f">Femenino</option>
-  <option value="m">Masculino </option>
-  <option value="otro">Otro </option>
-      </select>
+            <label class="label" for="genero"><b>Genero</b></label>
+            <br>
+            <select id="genero" name="genero">
+                <option>Seleccione genero </option>
+                <option value="f">Femenino</option>
+                <option value="m">Masculino </option>
+                <option value="otro">Otro </option>
+            </select>
+        </div>
 
-    <label class="label" for="eml"><b>Correo</b></label>
-    <input type="email" class="input" placeholder="Ingrese correo electronico" name="email" required>
+        <div style="margin: 10px;">
+            <label class="label" for="num"><b>Documento</b></label>
+            <br>
+            <input class="input" type="text" placeholder="Ingrese documento"  name="num" required>
 
-    <label class="label" for="direccion"><b>Direccion</b></label>
-    <input type="text" class="input" placeholder="Ingrese direccion" name="direccion" required>
-   
-   <label class="label" for="telefono"><b>Telefono</b></label>
-    <input type="number" class="input" placeholder="Ingrese telefono" name="telefono" required>
+            <div style="display: flex;">
+                <div style="margin: 10px;">
+                    <label class="label" for="direccion"><b>Dirección</b></label>
+                    <input type="text" class="input" placeholder="Ingrese direccion" name="direccion" required style="width: 150px;">
+                </div>
 
+                <div style="margin: 10px;">
+                    <label class="label" for="eml"><b>Correo</b></label>
+                    <input type="email" class="input" placeholder="Ingrese correo electronico" name="email" required>
+                </div>
+            </div>
 
-    <label class="label" for="egresado"><b>¿Es egresado?</b></label>
-    <br>
+            <label class="label" for="egresado"><b>¿Es egresado?</b></label>
+            <br>
+            <label><input type="checkbox" id="cbox1" value="first_checkbox"> Si</label>
+            <input type="checkbox" id="cbox2" value="second_checkbox"> <label for="cbox2">No</label>
 
-       <label><input type="checkbox" id="cbox1" value="first_checkbox"> Si</label><br>
+        </div>
 
-<input type="checkbox" id="cbox2" value="second_checkbox"> <label for="cbox2">No</label>
+        <div style="margin: 10px;">
+            <label class="label" for="programa"><b>Programa</b></label>
+            <br>
+            <select id="programa" name="programa" style="width: 200px;">
+                <option>Elija un programa </option>
+                <option value="esi">Especializacion en seguridad de la informacion</option>
+                <option value="mgti">Maestria en gestion de tecnologia de la informacion </option>
+                <option value="mgrma">Maestria en gestion de riesgo y medio ambiente </option>
+            </select>
 
-<label class="label" for="electoral"><b>Certificado electoral</b></label>
- <input type="file" name="comprobante">
-  </div> 
+            <div style="display: flex;">
+                <div style="margin: 10px;">
+                    <label class="label" for="telefono"><b>Telefono</b></label>
+                    <br>
+                    <input type="number" class="input" placeholder="Ingrese telefono" name="telefono" required>
+                </div>
+            </div>
+
+            <label class="label" for="electoral"><b>Certificado electoral</b></label>
+            <br>
+            <input type="file" name="comprobante" style="width: 200px;">
+        </div>
+
+        <div>
+
+        </div>
+    </div> 
 
 
   <div class="container" style="background-color:#f1f1f1">

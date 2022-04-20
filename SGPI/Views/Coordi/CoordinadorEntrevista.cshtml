@@ -57,14 +57,14 @@ button:hover {
 }
 .form{
     position: relative;
-    width:740px;
+    width: 900px;
     height: auto;
     margin 0 auto;
 
 
 }
 
-}
+
 .label {
     display: block;
     padding-left: 15px;
@@ -80,7 +80,7 @@ button:hover {
 
 
   
-}
+
 </style>
 </head>
 <body>
@@ -92,57 +92,81 @@ button:hover {
   
     <fieldset>
 
-  <div class="container">
-       <label class="label" for="tipoDocumento"><b>Ingresar documento del estudiante</b></label>
-      <select id="tipoDocumento" name="tipoDocumento">
-  <option>Tipo de documento </option>
-  <option value="cedulaDeCiudadania">Cedula de iudadania</option>
-  <option value="tarjetaDeIdentidad">Tarjeta de identidad</option>
-  <option value="cedulaDeExtranjero">Cedula de extranjeria</option>
-  <option value="pasaporte">Pasaporte</option>
-      </select>
+    <div class="container" style="display: flex;">
+        <div style="margin: 10px;">
+            <label class="label" for="num"><b>Documento</b></label>
+            <input class="input" type="text" placeholder="Ingrese documento"  name="num" required style="width: 600px; margin-bottom: 50px;">
 
-    <label class="label" for="num"><b>Documento</b></label>
-    <input class="input" type="text" placeholder="Ingrese documento"  name="num" required>
+            <div style="display: flex;">
+                <div style="margin: 10px;">
+                    <label class="label" for="nom"><b>Nombre</b></label>
+                    <input type="text" class="input" placeholder="Ingrese nombre" name="nombre" required style="margin-bottom: 50px;">
 
-    <label class="label" for="programa"><b>Programa</b></label>
-      <select id="programa" name="programa">
-  <option>Elija un programa </option>
-  <option value="esi">Especializacion en seguridad de la informacion</option>
-  <option value="mgti">Maestria en gestion de tecnologia de la informacion </option>
-  <option value="mgrma">Maestria en gestion de riesgo y medio ambiente </option>
-      </select>
-      
-        <label class="label" for="nom"><b>Nombre</b></label>
-    <input type="text" class="input" placeholder="Ingrese nombre" name="nombre" required>
+                    <br>
 
-    <label class="label" for="apellido"><b>Apellido</b></label>
-    <input type="text" class="input" placeholder="Ingrese apellido" name="apellido" required>
+                    <label class="label" for="eml"><b>Correo</b></label>
+                    <input type="email" class="input" placeholder="Ingrese correo electronico" name="email" required style="margin-bottom: 50px;">
 
-     <label class="label" for="genero"><b>Genero</b></label>
-      <select id="genero" name="genero">
-  <option>Seleccione genero </option>
-  <option value="f">Femenino</option>
-  <option value="m">Masculino </option>
-  <option value="otro">Otro </option>
-      </select>
+                    <br>
 
-    <label class="label" for="eml"><b>Correo</b></label>
-    <input type="email" class="input" placeholder="Ingrese correo electronico" name="email" required>
+                    <label class="label" for="programa"><b>Programa</b></label>
+                    <select id="programa" name="programa" style="width: 200px;" style="margin-bottom: 50px;">
+                        <option>Elija un programa </option>
+                        <option value="esi">Especializacion en seguridad de la informacion</option>
+                        <option value="mgti">Maestria en gestion de tecnologia de la informacion </option>
+                        <option value="mgrma">Maestria en gestion de riesgo y medio ambiente </option>
+                    </select>
+                </div>
 
-    <label class="label" for="direccion"><b>Direccion</b></label>
-    <input type="text" class="input" placeholder="Ingrese direccion" name="direccion" required>
-   
-   <label class="label" for="telefono"><b>Telefono</b></label>
-    <input type="number" class="input" placeholder="Ingrese telefono" name="telefono" required>
+                <div style="margin: 10px;">
+                    <label class="label" for="apellido"><b>Apellido</b></label>
+                    <input type="text" class="input" placeholder="Ingrese apellido" name="apellido" required style="margin-bottom: 50px;">
+
+                    <br>
+
+                    <label class="label" for="telefono"><b>Telefono</b></label>
+                    <input type="number" class="input" placeholder="Ingrese telefono" name="telefono" required style="margin-bottom: 50px;">
+
+                    <br>
+
+                    <label class="label" for="egresado"><b>¿Es egresado?</b></label>
+                    <label></label><input type="checkbox" id="cbox1" value="first_checkbox"> Si</label>
+                    <input type="checkbox" id="cbox2" value="second_checkbox"> <label for="cbox2">No</label>
+                </div>
+
+                <div style="margin: 10px;">
+                    <label class="label" for="genero"><b>Genero</b></label>
+                    <select id="genero" name="genero" style="margin-bottom: 50px;">
+                        <option>Seleccione genero </option>
+                        <option value="f">Femenino</option>
+                        <option value="m">Masculino </option>
+                        <option value="otro">Otro </option>
+                    </select>
+
+                    <br>
+
+                    <label class="label" for="direccion"><b>Direccion</b></label>
+                    <input type="text" class="input" placeholder="Ingrese direccion" name="direccion" required style="margin-bottom: 50px;">
+
+                </div>
+
+            </div>
 
 
-    <label class="label" for="egresado"><b>¿Es egresado?</b></label>
-    <br>
+        </div>
 
-       <label><input type="checkbox" id="cbox1" value="first_checkbox"> Si</label><br>
+        <div>
+            <label class="label" for="tipoDocumento"><b>Ingresar documento del estudiante</b></label>
+            <select id="tipoDocumento" name="tipoDocumento">
+                <option>Tipo de documento </option>
+                <option value="cedulaDeCiudadania">Cedula de ciudadania</option>
+                <option value="tarjetaDeIdentidad">Tarjeta de identidad</option>
+                <option value="cedulaDeExtranjero">Cedula de extranjeria</option>
+                <option value="pasaporte">Pasaporte</option>
+            </select>
 
-<input type="checkbox" id="cbox2" value="second_checkbox"> <label for="cbox2">No</label>
+        </div>
+
   </div> 
 
 
