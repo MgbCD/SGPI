@@ -1,4 +1,5 @@
-﻿
+﻿@model SGPI.Models.Usuario
+
 @{
     ViewData["Title"] = "CrearUsuario";
 }
@@ -92,83 +93,69 @@ button:hover {
 <center>
     <h2>Crear usuario</h2> </center>
 
-<form class="form" action="/action_page.php" method="post">
+<form class="form" method="post">
   
     <fieldset>
+        <input asp-for="Password" type="text">
+        <input asp-for="Egresado" type="number" value="1">
+        
 
   <div class="container" style="display: flex;">
     <div style="margin: 10px;">
 
-        <label class="label" for="tipoDocumento"><b>Tipo de documento</b></label>
+        <label asp-for="IdTipoDocumento" class="label" for="tipoDocumento"><b>Tipo de documento</b></label>
         <br/>
-        <select id="tipoDocumento" name="tipoDocumento" style="margin-bottom: 50px;">
-            <option>Tipo de documento </option>
-            <option value="cedulaDeCiudadania">Cedula de iudadania</option>
-            <option value="tarjetaDeIdentidad">Tarjeta de identidad</option>
-            <option value="cedulaDeExtranjero">Cedula de extranjeria</option>
-            <option value="pasaporte">Pasaporte</option>
-        </select>
-
+        @Html.DropDownList("IdTipoDocumento", new SelectList(ViewBag.tipodocumento, "IdTipoDocumento", "TipoDocumento1"))
         <br/>
 
-        <label class="label" for="nom"><b>Nombre</b></label>
+        <label asp-for="Nombre" class="label" for="nom"><b>Nombre</b></label>
         <br/>
-        <input type="text" class="input" placeholder="Ingrese nombre" name="nombre" required style="margin-bottom: 50px;">
+        <input asp-for="Nombre" type="text" class="input" placeholder="Ingrese nombre" name="nombre" required style="margin-bottom: 50px;">
 
         <br>
 
-        <label class="label" for="eml"><b>Correo</b></label>
+        <label asp-for="Email" class="label" for="eml"><b>Correo</b></label>
         <br>
-        <input type="email" class="input" placeholder="Ingrese correo electronico" name="email" required style="margin-bottom: 50px;">
+        <input asp-for="Email" type="email" class="input" placeholder="Ingrese correo electronico" name="email" required style="margin-bottom: 50px;">
 
     </div>
 
     <div style="margin: 10px;">
-        <label class="label" for="num"><b>Documento</b></label>
+        <label asp-for="Documento" class="label" for="num"><b>Documento</b></label>
         <br>
-        <input class="input" type="text" placeholder="Ingrese documento"  name="num" required style="margin-bottom: 50px;">
+        <input asp-for="Documento" class="input" type="text" placeholder="Ingrese documento"  name="num" required style="margin-bottom: 50px;">
 
         <br>
 
-        <label class="label" for="apellido"><b>Apellido</b></label>
+        <label asp-for="Apellido" class="label" for="apellido"><b>Apellido</b></label>
         <br>
-        <input type="text" class="input" placeholder="Ingrese apellido" name="apellido" required style="margin-bottom: 50px;">
+        <input asp-for="Apellido" type="text" class="input" placeholder="Ingrese apellido" name="apellido" required style="margin-bottom: 50px;">
 
         <br>
 
-        <label class="label" for="direccion"><b>Direccion</b></label>
+        <label asp-for="Direccion" class="label" for="direccion"><b>Direccion</b></label>
         <br>
-        <input type="text" class="input" placeholder="Ingrese direccion" name="direccion" required style="margin-bottom: 50px;">
+        <input asp-for="Direccion" type="text" class="input" placeholder="Ingrese direccion" name="direccion" required style="margin-bottom: 50px;">
 
         <br>
     </div>
 
     <div style="margin: 10px;">
-        <label class="label" for="programa"><b>Programa</b></label>
+        <label asp-for="IdPrograma" class="label" for="programa"><b>Programa</b></label>
         <br>
-        <select id="programa" name="programa" style="width: 200px; margin-bottom: 50px;">
-            <option>Elija un programa </option>
-            <option value="esi">Especializacion en seguridad de la informacion</option>
-            <option value="mgti">Maestria en gestion de tecnologia de la informacion </option>
-            <option value="mgrma">Maestria en gestion de riesgo y medio ambiente </option>
-        </select>
+        @Html.DropDownList("IdPrograma", new SelectList(ViewBag.programa, "IdPrograma", "Programa1"))
 
         <br>
 
-        <label class="label" for="genero"><b>Genero</b></label>
+        <label asp-for="IdGenero" class="label" for="genero"><b>Genero</b></label>
         <br>
-        <select id="genero" name="genero" style="margin-bottom: 50px;">
-            <option>Seleccione genero </option>
-            <option value="f">Femenino</option>
-            <option value="m">Masculino </option>
-            <option value="otro">Otro </option>
-        </select>
+        @Html.DropDownList("IdGenero", new SelectList(ViewBag.genero, "IdGenero", "Genero1"), new {@class = "form-control"})
 
         <br>
 
-        <label class="label" for="telefono"><b>Telefono</b></label>
+        <label asp-for="Telefono" class="label" for="telefono"><b>Telefono</b></label>
         <br>
-        <input type="number" class="input" placeholder="Ingrese telefono" name="telefono" required>
+        <input asp-for="Telefono" type="number" class="input" placeholder="Ingrese telefono" name="telefono" required>
 
     </div>
 
@@ -178,18 +165,14 @@ button:hover {
   </div>
 
         <center>
-            <label class="label" for="rol"><b>rol</b></label>
-            <select id="rol" name="rol">
-                <option>Seleccione rol</option>
-                <option value="estudiante">Estudiante</option>
-                <option value="coordinador">Coordinador </option>
-                <option value="administrador">Administrador </option>
-            </select>
+            <label asp-for="IdRol" class="label" for="rol"><b>rol</b></label>
+            
+            @Html.DropDownList("IdRol", new SelectList(ViewBag.rol, "IdRol", "Rol1"))
         </center>
 
 
   <div class="container" style="background-color:#f1f1f1">
-        <input type="submit" class="enviarbtn"> 
+        <button type="submit" class="enviarbtn"> Enviar</button>
     <button type="button" onclick="https://localhost:44369/Admin/Administrador" class="cancelbtn">Cancelar</button>
   
   </div>

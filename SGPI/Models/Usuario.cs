@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
@@ -16,12 +17,16 @@ namespace SGPI.Models
         }
 
         public int IdUsuario { get; set; }
+        [Required]
         public string Nombre { get; set; }
+        [Required]
+        [MinLength(2)]
         public string Apellido { get; set; }
         public int IdGenero { get; set; }
         public int IdTipoDocumento { get; set; }
         public int Documento { get; set; }
         public int IdPrograma { get; set; }
+        [EmailAddress(ErrorMessage = "Error con el correo")]
         public string Email { get; set; }
         public int Telefono { get; set; }
         public int IdRol { get; set; }
