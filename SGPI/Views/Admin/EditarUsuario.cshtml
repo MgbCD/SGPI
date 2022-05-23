@@ -1,7 +1,7 @@
 ﻿@model SGPI.Models.Usuario
 
 @{
-    ViewData["Title"] = "CrearUsuario";
+    ViewData["Title"] = "Editar usuario";
 }
 
 <!DOCTYPE html>
@@ -91,13 +91,14 @@ button:hover {
 <body>
 
 <center>
-    <h2>Crear usuario</h2> </center>
+    <h2>Editar usuario</h2> </center>
 
-<form class="form" method="post">
+<form class="form" method="post" asp-route-Idusuario=@ViewBag.idusuario>
   
     <fieldset>
         <input asp-for="Password" type="hidden" value="123">
         <input asp-for="Egresado" type="hidden" value="1">
+
         
 
   <div class="container" style="display: flex;">

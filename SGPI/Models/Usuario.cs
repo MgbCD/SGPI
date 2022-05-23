@@ -10,7 +10,7 @@ namespace SGPI.Models
     {
         public Usuario()
         {
-            Entrevista = new HashSet<Entrevistum>();
+            Entrevista = new HashSet<Entrevista>();
             Homologacions = new HashSet<Homologacion>();
             Pagos = new HashSet<Pago>();
             ProgramaUsuarios = new HashSet<ProgramaUsuario>();
@@ -38,7 +38,7 @@ namespace SGPI.Models
         public virtual Programa IdProgramaNavigation { get; set; }
         public virtual Rol IdRolNavigation { get; set; }
         public virtual TipoDocumento IdTipoDocumentoNavigation { get; set; }
-        public virtual ICollection<Entrevistum> Entrevista { get; set; }
+        public virtual ICollection<Entrevista> Entrevista { get; set; }
         public virtual ICollection<Homologacion> Homologacions { get; set; }
         public virtual ICollection<Pago> Pagos { get; set; }
         public virtual ICollection<ProgramaUsuario> ProgramaUsuarios { get; set; }

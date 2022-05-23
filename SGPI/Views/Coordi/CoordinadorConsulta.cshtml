@@ -1,4 +1,6 @@
-﻿@{
+﻿@model SGPI.Models.Usuario;
+
+@{
     ViewData["Title"] = "CoordinadorConsulta";
 }
 <!DOCTYPE html>
@@ -60,23 +62,18 @@ form {border: 3px solid #f1f1f1;}
 <center>
     <h2>Consulta</h2> </center>
 
-<form action="../../form-result.php" method="post" target="_blank">
+    <form asp-action="CoordinadorConsulta" method="post">
 
-  <p>
-   <label class="label" for="search"><b>Buscar por documento de estudiante</b></label>
-   <input type="search" class="input" class="search" name="busqueda" placeholder="Buscador">
+          <p>
+           <label class="label" for="search"><b>Buscar por documento de estudiante</b></label>
+           <input asp-for="Documento" type="text" value="" class="form-control">
 
-    <input type="submit" value="Buscar">
-     <label class="label" for="programa"><b>Elegir por programa</b></label>
-      <select id="programa" name="programa">
-  <option>Elija un programa </option>
-  <option value="esi">Especializacion en seguridad de la informacion</option>
-  <option value="mgti">Maestria en gestion de tecnologia de la informacion </option>
-  <option value="mgrma">Maestria en gestion de riesgo y medio ambiente </option>
-      </select>
-  </p>
+            <button type="submit" class="btn btn-primary">Buscar</button>
+             <label class="label" for="programa"><b>Elegir por programa</b></label>
+              @Html.DropDownList("IdPrograma", new SelectList(ViewBag.programa, "IdPrograma", "Programa1"))
+          </p>
 
-</form>
+    </form>
 <table class="table" style="">
 <tr class="tr">
   <td><strong>Nombre</strong></td>
@@ -92,20 +89,17 @@ form {border: 3px solid #f1f1f1;}
  
 </tr>
 
-<tr class="tr">
-  <td>Camilo Giraldo</td>
-  <td>2014554</td>
-  <td>Ingenieria en software</td>
-  <td> <input type="email" style="width: 100px;"> </td>
-  <td>2154002</td>
-  <td><input id="number" type="number" style="width: 100px;"></td>
- <td><input type="date" id="iniciar" name="iniciar" min="1995-01-01" max="2025-01-01"/>
-      </td>
-  <td>Admintido</td>
-
-  <td><input type="file" style="width: 150px;"/>Agregar</td>
- 
-</tr>
+    <tr>
+        <td>@Html.DisplayFor(modelItem => modelItem.Nombre)</td>
+        <td>@Html.DisplayFor(modelItem => modelItem.Apellido)</td>
+        <td>@Html.DisplayFor(modelItem => modelItem.IdTipoDocumento)</td>
+        <td>@Html.DisplayFor(modelItem => modelItem.Documento)</td>
+        <td>@Html.DisplayFor(modelItem => modelItem.ProgramaUsuarios)</td>
+        <td>@Html.DisplayFor(modelItem => modelItem.IdRol)</td>
+        <td>
+            
+        </td>
+    </tr>
 
 
 </table>

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace SGPI.Models
 {
-    public partial class Entrevistum
+    public partial class Entrevista
     {
         public int IdEntrevista { get; set; }
         public int IdUsuario { get; set; }

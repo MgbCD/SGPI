@@ -17,7 +17,7 @@ namespace SGPI.Models
         {
         }
 
-        public virtual DbSet<Entrevistum> Entrevista { get; set; }
+        public virtual DbSet<Entrevista> Entrevista { get; set; }
         public virtual DbSet<Genero> Generos { get; set; }
         public virtual DbSet<Homologacion> Homologacions { get; set; }
         public virtual DbSet<Modulo> Modulos { get; set; }
@@ -42,7 +42,7 @@ namespace SGPI.Models
         {
             modelBuilder.HasAnnotation("Relational:Collation", "Modern_Spanish_CI_AS");
 
-            modelBuilder.Entity<Entrevistum>(entity =>
+            modelBuilder.Entity<Entrevista>(entity =>
             {
                 entity.HasKey(e => e.IdEntrevista)
                     .HasName("PK__Entrevis__CAF89ECC0C5BF8E8");
